@@ -20,10 +20,7 @@ const logger = (array) => {
  *   C = (F - 32) * (5/9)
  ************************************/
 const toCelsius = (temperatures) => {
-  let fahrenheit = temperatures.map(
-    (element) => (element = (element - 32) * (5 / 9))
-  );
-  return fahrenheit;
+  return temperatures.map((element) => (element = (element - 32) * (5 / 9)));
 };
 
 /**************************************
@@ -35,10 +32,9 @@ const toCelsius = (temperatures) => {
  *   that exceed the threshhold
  ***************************************/
 const hottestDays = (temperatures, threshhold) => {
-  let exceeded = temperatures.filter((temp) => {
+  return temperatures.filter((temp) => {
     if (temp > threshhold) return temp;
   });
-  return exceeded;
 };
 
 /******************************************
